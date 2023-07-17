@@ -99,7 +99,7 @@ body {
 }
 
 .textBox p {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .textBox .homeBtn {
@@ -161,6 +161,26 @@ body {
     background: #c63338;
     filter: blur(60px);
     animation: animBack 6s linear infinite;
+}
+
+.container nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff; /* Set the desired color for the link text */
+    transition: .3s;
+}
+
+.container nav ul li a:hover {
+    color: #c63338; /* Set the desired color for the link text on hover */
+}
+
+
+.homeBtn a{
+    text-decoration: none;
+    color: #fff; /* Set the desired color for the link text on hover */
+}
+.homeBtn a:hover{
+    color: #000; /* Set the desired color for the link text on hover */
 }
 
 @keyframes animBack {
