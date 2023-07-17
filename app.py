@@ -9,7 +9,7 @@ app.secret_key = secrets.token_hex(16)
 
 @app.route("/")
 def home():
-    return render_template("index2.html", discord_url=Oauth.discord_login_url)
+    return render_template("index2.html", discord_url=Oauth.discord_login_url, invite_url=Oauth.discord_invite_url)
 
 
 @app.route("/login", methods=["GET"])
@@ -24,5 +24,5 @@ def login():
     return f"Success, logged in as {user_name}#{user_id}"
 
 
-def run():
+if __name__ == "__main__":
     app.run(debug=True)
