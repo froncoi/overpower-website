@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <link rel="icon" type="image/png" href="2c37963c2f40c7e9cd7bc09c4719a424.png"/>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style2.css') }}"
+    />
     <title>OVER POWER</title>
   </head>
   <body>
@@ -13,21 +17,23 @@
       <nav>
         <h1><span>OVER </span>POWER</h1>
         <ul>
-          <li>Home</li>
+          <li><a href="{{ invite_url }}">Invite</a></li>
           <li>Our Team</li>
-          <li>Support Server</li>
-          <li>Contact</li>
+          <li><a href="https://discord.gg/E4vnewmZ33">Support Server</a></li>
+          <li><a href="index.html">Contact</a></li>
         </ul>
       </nav>
       <section>
         <div class="textBox">
+          <h1><span>The most </span>Powerful Bot</h1>
+          <p>Login to manage your server</p>
           <button class="homeBtn" style="--i: #fff" onclick="redirectToLogin()">
-            Login
+            <a href="{{ discord_url }}">Login</a>
           </button>
-          <button class="homeBtn" style="--i: #c63338">Explore</button>
+          <button class="homeBtn" style="--i: #c63338">Explore Features</button>
         </div>
       </section>
     </div>
-    <script src="./script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
 </html>
