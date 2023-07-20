@@ -2,14 +2,13 @@ from flask import Flask, render_template, request, session
 from oauth import Oauth
 import secrets
 
-# Flask app setup
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
 
 @app.route("/")
 def home():
-    return render_template("index2.html", discord_url=Oauth.discord_login_url, invite_url=Oauth.discord_invite_url)
+    return render_template("index.html", discord_url=Oauth.discord_login_url, invite_url=Oauth.discord_invite_url)
 
 
 @app.route("/login", methods=["GET"])
